@@ -264,7 +264,7 @@ func (a *ArtifactsAPIService) CreateArtifactExecute(r ApiCreateArtifactRequest) 
 		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Registry-Hash-Algorithm", r.xRegistryHashAlgorithm, "")
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = *r.body
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1965,7 +1965,7 @@ func (a *ArtifactsAPIService) SearchArtifactsByContentExecute(r ApiSearchArtifac
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = *r.body
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2159,7 +2159,7 @@ func (a *ArtifactsAPIService) UpdateArtifactExecute(r ApiUpdateArtifactRequest) 
 		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Registry-Description-Encoded", r.xRegistryDescriptionEncoded, "")
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = *r.body
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
